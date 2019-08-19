@@ -1,0 +1,200 @@
+class Solution {
+    private int numOne=0;
+    private String result ="";
+    public String intToRoman(int num) {
+        numOne=num;
+        subtractOneThousand();
+        subtractNineH();
+        subtractFiveH();
+        subtractFourH();
+        subtractOneH();
+        subtractNinety();
+        subtractFifty();
+        subtractFourty();
+        subtractTen();
+        subtractNine();
+        subtractFive();
+        subtractFour();
+        subtractOne();
+        
+        return result;
+    }
+    
+    private void subtractOneThousand(){
+        int count =0;
+        if(numOne>=1000){
+            while(numOne>=1000){
+                numOne-=1000;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="M";
+        }
+    }
+    private void subtractNineH(){
+        int count =0;
+        if(numOne>=900){
+            while(numOne>=900){
+                numOne-=900;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="CM";
+        }
+    }
+    private void subtractFiveH(){
+        int count =0;
+        if(numOne>=500){
+            while(numOne>=500){
+                numOne-=500;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="D";
+        }
+    }
+    private void subtractFourH(){
+        int count =0;
+        if(numOne>=400){
+            while(numOne>=400){
+                numOne-=400;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="CD";
+        }
+    }
+    
+    private void subtractOneH(){
+        int count =0;
+        if(numOne>=100){
+            while(numOne>=100){
+                numOne-=100;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="C";
+        }
+    }
+    private void subtractNinety(){
+        int count =0;
+        if(numOne>=90){
+            while(numOne>=90){
+                numOne-=90;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="XC";
+        }
+    }
+    private void subtractFifty(){
+        int count =0;
+        if(numOne>=50){
+            while(numOne>=50){
+                numOne-=50;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="L";
+        }
+    }
+    
+    private void subtractFourty(){
+        int count =0;
+        if(numOne>=40){
+            while(numOne>=40){
+                numOne-=40;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="XL";
+        }
+    }
+    
+    private void subtractTen(){
+        int count =0;
+        if(numOne>=10){
+            while(numOne>=10){
+                numOne-=10;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="X";
+        }
+    }
+    private void subtractNine(){
+        int count =0;
+        if(numOne>=9){
+            while(numOne>=9){
+                numOne-=9;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="IX";
+        }
+    }
+    
+    private void subtractFive(){
+        int count =0;
+        if(numOne>=5){
+            while(numOne>=5){
+                numOne-=5;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="V";
+        }
+    }
+    
+    private void subtractFour(){
+        int count =0;
+        if(numOne>=4){
+            while(numOne>=4){
+                numOne-=4;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="IV";
+        }
+    }
+    
+    private void subtractOne(){
+        int count =0;
+        if(numOne>=1){
+            while(numOne>=1){
+                numOne-=1;
+                count++;
+            }
+        }
+        
+        for(int i=0;i<count;i++){
+            result+="I";
+        }
+    }
+    
+    
+}
