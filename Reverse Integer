@@ -1,0 +1,30 @@
+class Solution {
+    public int reverse(int x) {
+       
+       String num = x +"";
+       String newNum ="";
+       for(int i=num.length()-1; i>=0;i--){
+            if(num.charAt(i)!= '-'){
+                newNum += num.charAt(i);
+            }
+            
+        }
+        
+        try{
+            int mouse = Integer.parseInt(newNum);
+        }
+        catch (Exception e) {
+         return 0;
+        }
+        if(x<0){
+           int cat = Integer.parseInt(newNum);
+           return (-1*cat);
+       }
+        
+        int finalNum = Integer.parseInt(newNum);
+        return finalNum;
+        
+        
+        
+    }
+}
